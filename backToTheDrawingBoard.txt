@@ -1,0 +1,45 @@
+Yeah I'm thinking maybe I am going to have to go back to the drawing board in
+terms of how I structure this project.
+
+My initial thinking was that you would take a turn and then you would watch
+each enemy take their turn in turn. The thing about that is that it is slow as
+fuck and makes the game feel really disjointed. Roguelikes may be turn based
+games, but generally some turns are significantly less interesting than others
+and you don't want all of them to take forever.
+
+So, my new idea in terms of how the visual representation and turns work is that
+the game iterates over all of the agents in the floor and gets them all to
+return an action object, then these actions need to be stratified into groups
+that can be played at the same time.
+
+Basically if an agent just moves around or casts a spell on itself or interacts
+with a static part of the environment then that can be played at the same time
+as other animations, but when an agent interacts with another agent, those
+animations need to be played in order for it to make any sense. Of course, if
+there are interactions between agents that the player can't actually see then
+that should be skipped as usual.
+
+so lets say we have an example where there are two enemies and the player
+approaches one, then it hits the player, then the other enemy approaches the
+player.
+Moving is not an interaction, so the player moving happens by itself, then the
+enemy attacks the player afterwards, and the other enemy moving can be played
+at the same time as the attack.
+
+
+Yeah so that is pretty cool but then how do we handle the fact that the state
+which is visible on the screen is not the same as the state that is actually
+current, since actions do actually rely on the state of the world after the
+action that was sent before even if they might actually end up playing at the
+same time? Essentially we need to have the actual game state which is doing it's
+own thing, so the floor object will probably stop being a subclass of the Screen
+class, and then we need to have a second set of state which is shit like the
+camera and the floating point positions of decals etc.
+
+So this kind of makes me think that it actually might be good to do the old
+thing where I implement the game first with something along the lines of an
+ascii interface, and then when that works think about implementing a 3d
+interface. In terms of game design I do think that this would probably be a good
+practice since it allows me to think about the questions of game design without
+tangling those questions up with additional questions about implementing the
+visuals etc.

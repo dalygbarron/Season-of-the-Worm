@@ -1,0 +1,27 @@
+
+ui.png
+size: 512, 256
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+gradient
+  rotate: false
+  xy: 262, 2
+  size: 2, 128
+  orig: 2, 128
+  offset: 0, 0
+  index: -1
+itemHolder
+  rotate: false
+  xy: 2, 2
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+panel
+  rotate: false
+  xy: 132, 2
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1

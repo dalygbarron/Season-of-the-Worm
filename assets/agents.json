@@ -1,0 +1,11 @@
+{
+  "player": {
+    "maxHp": 10,
+    "behaviour": "PLAYER"
+  },
+  "druid": {
+    "maxHp": 5,
+    "behaviour": "DUMB",
+    "sprite": "druid"
+  }
+}

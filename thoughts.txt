@@ -1,0 +1,24 @@
+Alright so I am at a point where you and the enemies can move around the world
+in a way that at least looks correct, but you are able to walk through walls.
+Obviously enemies should simply not try to walk through walls since they are
+computer controlled, but in the case of the player we need to validate their
+actions at some point. I had considered adding some kind of action validation
+function but to be honest that is going to introduce quite a bit more
+complexity. Although it makes the input handling code a bit more complex, we
+should validate what the user is doing at that point, so if the user is
+trying to do something invalid it should never become an action and thus we
+won't clog up the action handling code with situations where actions are not
+even valid to begin with. Validating where the user can walk would be best
+implemented using the same pathing map that the enemies use I think, so I guess
+before we do that we should implement the storage and generation of a pathing
+map. I will use the good old djikstra map thing I've used before since it's cool
+and doesn't require you to generate a seperate path for each enemy.
+
+
+
+
+What UI is needed for the main screen?
+ - inventory at the bottom so you can do whatever.
+ - health bar
+ - lives
+ - map

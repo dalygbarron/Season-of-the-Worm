@@ -1,0 +1,69 @@
+
+sprites.png
+size: 1024, 256
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+bone_shield
+  rotate: false
+  xy: 650, 187
+  size: 86, 57
+  orig: 86, 57
+  offset: 0, 0
+  index: -1
+death_speaker
+  rotate: false
+  xy: 2, 124
+  size: 160, 120
+  orig: 160, 120
+  offset: 0, 0
+  index: -1
+druid
+  rotate: false
+  xy: 488, 31
+  size: 73, 91
+  orig: 73, 91
+  offset: 0, 0
+  index: -1
+imp
+  rotate: false
+  xy: 2, 2
+  size: 160, 120
+  orig: 160, 120
+  offset: 0, 0
+  index: -1
+mimic
+  rotate: false
+  xy: 164, 124
+  size: 160, 120
+  orig: 160, 120
+  offset: 0, 0
+  index: -1
+shadow_soul
+  rotate: false
+  xy: 164, 2
+  size: 160, 120
+  orig: 160, 120
+  offset: 0, 0
+  index: -1
+shadow_tendrils
+  rotate: false
+  xy: 326, 124
+  size: 160, 120
+  orig: 160, 120
+  offset: 0, 0
+  index: -1
+skeleton
+  rotate: false
+  xy: 326, 2
+  size: 160, 120
+  orig: 160, 120
+  offset: 0, 0
+  index: -1
+zombie
+  rotate: false
+  xy: 488, 124
+  size: 160, 120
+  orig: 160, 120
+  offset: 0, 0
+  index: -1
